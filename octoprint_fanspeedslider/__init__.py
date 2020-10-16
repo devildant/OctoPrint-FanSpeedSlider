@@ -1,5 +1,6 @@
 # coding=utf-8
 from __future__ import absolute_import
+from __future__ import unicode_literals
 
 from decimal import *
 import re
@@ -131,6 +132,7 @@ class FanSliderPlugin(octoprint.plugin.StartupPlugin,
 		)
 
 __plugin_name__ = "Fan Speed Control"
+__plugin_pythoncompat__ = ">=2.7,<4"
 
 def __plugin_load__():
 	global __plugin_implementation__

@@ -41,7 +41,7 @@ $(function () {
 		};
 
 		self.control.fanSpeedToPwm = ko.pureComputed(function () {
-			self.speed = self.control.fanSpeed() * 255 / 100 //don't forget to limit this to 2 decimal places at some point.
+			self.speed = Math.round(self.control.fanSpeed() * 255 / 100) //don't forget to limit this to 2 decimal places at some point.
 			return self.speed;
 		});
 
